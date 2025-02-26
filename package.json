@@ -9,16 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^43.2.0",
+    "@ckeditor/ckeditor5-react": "^9.3.1",
+    "animate.css": "^4.1.1",
+    "axios": "^1.7.7",
+    "baguettebox.js": "^1.12.0",
+    "bootstrap": "^5.3.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
+    "next": "14.2.15",
+    "owl.carousel": "^2.3.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.15"
+    "react-google-recaptcha": "^3.1.0",
+    "react-owl-carousel": "^2.3.3",
+    "swiper": "^11.1.14"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/jquery": "^3.5.31",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
+    "@types/react-google-recaptcha": "^2.1.9",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }

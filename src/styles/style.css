@@ -1,0 +1,475 @@
+/**
+ * http://applemusic.tumblr.com/
+ * https://jsfiddle.net/xq56dmrh/
+ */
+
+/** Ultra Light */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 100;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+/** Thin */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 200;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 500;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 600;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+.fira-sans-thin {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .fira-sans-extralight {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .fira-sans-light {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .fira-sans-regular {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .fira-sans-medium {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .fira-sans-semibold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .fira-sans-bold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .fira-sans-extrabold {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .fira-sans-black {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .fira-sans-thin-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .fira-sans-extralight-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .fira-sans-light-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .fira-sans-regular-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .fira-sans-medium-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .fira-sans-semibold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .fira-sans-bold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .fira-sans-extrabold-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .fira-sans-black-italic {
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+
+/** Bold */
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 700;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+:root {
+    --primary-color: #323030;
+    --body-color: #323030;
+    --secondary-color: #DBDBDB;
+    --dark-color: #323030;
+    --lightbg-color: #F8F8F8;
+    --primary-font: 'San Francisco';
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--body-color);
+    font-family: var(--primary-font);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+.secondary-font {
+    font-family: var(--secondart-font);
+}
+.primary-gradient {
+    /*background: linear-gradient(90deg,#7952b3 0%,#573d7e 100%);*/
+    /* background: #5f428e; */
+    background: #5f428e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5f428e, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5f428e, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.bg-light {
+    background-color: var(--lightbg-color);
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+a {
+    text-decoration: none;
+}
+a,a:focus {
+    outline: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+}
+.dark-title {
+    color: var(--dark-color)!important;
+}
+.light {
+    font-weight: 300!important;
+}
+.regular {
+    font-weight: 400!important;
+}
+.medium {
+    font-weight: 500!important;
+}
+.semibold {
+    font-weight: 600!important;
+}
+.bold {
+    font-weight: 700!important;
+}
+.font-13 {
+    font-size: 13px!important;
+}
+.font-14 {
+    font-size: 14px!important;
+}
+.secondary-bg {
+    background-color: var(--secondary-color);
+}
+.secondary-color {
+    color: var(--secondary-color)!important;
+}
+.text-black {
+    color: #000000!important;
+}
+.top-page-padding {
+    padding-top: 135px;
+}
+.btn-white {
+    background-color: #ffffff;
+    padding: 12px 30px;
+}
+.btn-white:hover {
+    background-color: #000000;
+    color:#ffffff;
+}
+.btn-custom-outline {
+    background-color: #DEA52C;
+    padding: 12px 30px;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+.default-padding {
+    padding: 70px 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+}
+.hover:hover {
+    color: var(--primary-color) !important;
+}
+.pb-top {
+    border-top: 5px solid var(--primary-color);
+}
+.form-control {
+    background-color: #ffffff;
+}
+
+
+input.form-control, select.form-control {
+    height: 50px;
+}
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.banner-section {
+    height: 80vh;
+    background-position: top right;
+    background-size: cover;
+    position: relative;
+}
+.social-box {
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+}
+.banner-content {
+    position: absolute;
+    top: 0;
+    bottom: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 95%;
+}
+
+.cc-content {
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    color: #ffffff;
+}
+
+.owl-line-btn .owl-dots .owl-dot span {
+    width: 80px;
+    background: #DEDEDE;
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 80px;
+    background: #DEDEDE;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #323030;
+}
+.footer-top {
+    background-color: var(--body-color);
+}
+.f-news-ul li {
+    position: relative;
+    color: #ffffff;
+    display: block;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.f-news-ul li:before {
+    content: "-";
+}
+.f-news-ul li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    top: 0px;
+}
+.f-link-ul li {
+    position: relative;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}
+.sub-btn {
+    border-radius: 30px;
+}
+.newsletter-box .form-control {
+    border: 1px solid #707070;
+    border-radius: 0;
+}
+.newsletter-box .form-control::placeholder {
+    color: var(--body-color);
+    font-weight: 400;
+    opacity: 1;
+}
+.cc-content p {
+    display: flex;
+    gap: 20px;
+    text-transform: uppercase;
+}
+.main-header .navbar-nav {
+    display: flex;
+    gap: 15px;
+}
+.cc-content h4 {
+    text-transform: uppercase;
+}
+.title-section h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 30px 0;
+}
+.title-section {
+    background-color: #484848 !important;
+}
+@media screen and (min-width: 1099px) {
+    .banner-content h1 {
+        font-size: 70px;
+    }
+    .banner-content p {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .footer-box p {
+        font-size: 14px;
+    }
+    .footer-box ul li {
+        font-size: 14px;
+    }
+    .footer-box h4 {
+        font-size: 16px;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 20px;
+        height: 5px;
+    }
+    .navbar-brand {
+        max-width: 70px;
+    }
+}
+@media screen and (max-width: 767px) {
+
+    body p {
+        font-size: 16px;
+    }
+    .social-box {
+        bottom: 30px;
+        right: 30px;
+    }
+    .banner-section {
+        height: 50vh;
+    }
+    .banner-section {
+        background-position: bottom right;
+    }
+}
+.client-section {
+    background-color: #fff;
+    padding: 40px 0;
+  }
+  
+  .client-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the clients in the row */
+    gap: 20px; /* Space between client boxes */
+  }
+  
+  .client-box {
+    flex: 1 1 150px; /* Allow client boxes to grow and shrink, with a base width of 300px */
+    max-width: 150px; /* Set max width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional border */
+    background-color: #f9f9f9; /* Optional background */
+  }
+  
+  .client-box img {
+    max-width: 100%; /* Ensure the image fits within the box */
+    height: auto;
+  }
+  
+  .tech-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .tech-column {
+    flex: 1 1 20%; /* Adjust the width for each column */
+    margin: 10px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .tech-column {
+      flex: 1 1 45%; /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .tech-column {
+      flex: 1 1 100%; /* Stack columns on very small screens */
+    }
+  }
+  

@@ -1,115 +1,306 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import Link from 'next/link';
+import Head from 'next/head';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import HeaderNav from '@/component/Headernav';
+import Footer from '@/component/Footer';
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
 
-export default function Home() {
+
+const Homemain = () => {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+<HeaderNav></HeaderNav>
+      {/* Banner Section Start */}
+      <section className="banner-section">
+        <video autoPlay muted loop id="myVideo">
+          <source src="/img/video_sh_6.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        <div className="container-fluid">
+          <div className="banner-content">
+            <h1 className="regular">
+              <b>DELIVERING DIGITAL SUCCESS</b>
+            </h1>
+            <p style={{ fontWeight: '400' }}>
+              Healthcare | AI & ML | Websites | Mobile Apps | E-Commerce | Digital Marketing
+            </p>
+          </div>
+          <div className="social-box">
+            {[
+              { src: '/img/fb.png', alt: 'facebook', href: 'https://www.facebook.com/kintudesigns2005' },
+              { src: '/img/ins.png', alt: 'instagram', href: '#' },
+              { src: '/img/x.png', alt: 'x', href: 'https://twitter.com/x/migrate?tok=7b2265223a222f6b696e747532303035222c2274223a313731393531393130327d7b7867237bd2f74baabf67811550c3ce' },
+              { src: '/img/yt.png', alt: 'youtube', href: '#' },
+              { src: '/img/linkdin.png', alt: 'linkedin', href: 'https://www.linkedin.com/checkpoint/challengesV2/AQE7xJqUIVptrgAAAZBbU042npym8KoKEpohEyGbKsZlglicDFuiS1ADuRChIMSfDL7jrLsfgBnJEONS5BQKpqXvMSzaj54Fbg' },
+              { src: '/img/pnt.png', alt: 'pinterest', href: 'https://in.pinterest.com/kintu2005/' },
+            ].map(({ src, alt, href }) => (
+              <a key={alt} target="_blank" href={href} rel="noreferrer">
+                <Image src={src} width={30} height={30} alt={alt} className="img-fluid" />
+              </a>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      {/* Banner Section End */}
+
+      {/* Platform Section Start */}
+      <section className="plat-form-section bg-light py-5">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="flat-form-content text-center">
+                <h2 className="mb-3" style={{ fontSize: '2.5em', fontWeight: 600 }}>
+                  We are the one-of-a-kind leading platform<br />
+                  where innovation, entrepreneurship and<br />
+                  startups grow together
+                </h2>
+                <p style={{ fontWeight: 500 }}>
+                  <br />
+                  We support the creation of new business startups and the transformation and training of young people and companies in a digital perspective.<br />
+                  Born in 2005, we were the first in Surat to adopt a model that combines investment, business consulting, and digitally enhanced educational programs in one place and today<br />
+                  we are the biggest innovation hub in Gujarat.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Platform Section End */}
+
+    
+        <section className="plat-form-section bg-light py-5">
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="flat-form-content text-center">
+                            <h2 className="mb-3" style={{ font: '2.5em sans-serif', fontWeight: 600 }}>
+                                CASE STUDIES
+                            </h2>
+                            <p style={{ fontWeight: 500 }}>
+                                Hear from our customers about the design challenges they’ve faced. From better branding to battling burnout, find out how we helped them implement solutions, fast.
+                            </p>
+                            <br />
+                        </div>
+                        <div className="flat-form-content" style={{ width: '90%', margin: '0 auto' }}>
+                            <div className="sr-box mb-4 card p-4 rounded-3 text-left">
+                                <h1 className="mb-2" style={{ font: '2.5em sans-serif', fontWeight: 500, textAlign: 'left' }}>
+                                    <b>CERTILOGO.COM</b>
+                                </h1>
+                                <h6 style={{ fontWeight: 500 }}>
+                                    We bring Profitability to your trust
+                                </h6>
+                                <br />
+                                <h2 className="mb-3 bold">CERTILOGO PROTECTS CONSUMERS FROM COUNTERFEITS</h2>
+                                <div className="row align-items-center m-0">
+                                    <div className="col-md-3 order-2 order-sm-2 order-md-1 p-0">
+                                        <div className="who-content p-5">
+                                            <div className="cc-img">
+                                                <Image 
+                                                    src="/img/client_certilogo.png" 
+                                                    alt="Certilogo" 
+                                                    className="img-fluid" 
+                                                    layout="responsive" 
+                                                    width={500} 
+                                                    height={300} 
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-md-9 order-1 order-sm-1 order-md-2 p-0">
+                                        <div className="who-content p-5">
+                                            <p className="mb-3" style={{ fontWeight: 400 }}>
+                                                Certilogo empowers consumers to make informed buying decisions. As it was a startup and we won the client from our happy customers through word-of-mouth marketing. We started working on the startup from scratch and developed a good business relationship. We started the analysis of the requirements, suggested a proposal, and visited them in Italy twice. In the end, we completed the project and handed over all work and code within almost 18 months.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row d-flex justify-content-center text-center">
+                                <div className="col-md-4">
+                                <h1 style={{ font: '4.5em sans-serif', fontWeight: 200 }}><b>5x</b></h1>
+                                        <h2 style={{ font: '2em sans-serif', fontWeight: 200 }}><b>DEVELOPMENT</b><br /></h2>
+                                        <div style={{ font: '1.5em sans-serif', fontWeight: 200 }}>COST IN ITALY</div>
+                                    </div>
+                                    <div className="col-md-4">
+                                    <h1 style={{ font: '4.5em sans-serif', fontWeight: 500 }}><b>1x</b></h1>
+                                        <h2 style={{ font: '2em sans-serif', fontWeight: 400 }}><b>OUTSOURCING</b><br /></h2>
+                                        <div style={{ font: '1.5em sans-serif', fontWeight: 300 }}>COST IN INDIA</div>
+                                    </div>
+                                    <div className="col-md-4">
+                                    <h1 style={{ font: '4.5em sans-serif', fontWeight: 500 }}><b>4x</b></h1>
+                                        <h2 style={{ font: '2em sans-serif', fontWeight: 400 }}><b>PROFITABILITY</b><br /></h2>
+                                        <div style={{ font: '1.5em sans-serif', fontWeight: 300 }}>FOR BRAND</div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div className="flat-form-content text-center">
+                                    <Link href="/case_studies.html" className="btn btn-outline-primary px-3">MORE CASE STUDIES
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section className="client-section py-5" style={{ backgroundColor: '#FFF' }}>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="flat-form-content text-center mb-4">
+                            <h2 className="mb-1" style={{ font: '2.5em sans-serif', fontWeight: 600, }}>
+                                500+ SUCCESSFUL CLIENTS
+                            </h2>
+                            <p style={{ fontWeight: 500 }}>
+                                United States, United Kingdom, UAE, Italy, Netherlands, Canada and more...
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+                </div>
+
+                < div className="client-carousel owl-carousel owl-theme" style={{ flex: '1' }}>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_alfapizza.png"
+                                alt="Alfa Pizza"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_maxpho.png"
+                                alt="Max Pho"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_alpinestarts.png"
+                                alt="Alpinestars"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_rebeltravel.png"
+                                alt="Rebel Travel"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_certilogo.png"
+                                alt="Certilogo"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_hotelport.png"
+                                alt="Hotel Port"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_foolfarm.png"
+                                alt="Fool Farm"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_smartpulse.png"
+                                alt="Smart Pulse"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_simplyweight.png"
+                                alt="Simply Weight"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_parking.png"
+                                alt="Parking"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                    <div className="item">
+                        <div className="client-box">
+                            <Image
+                                src="/img/client_ecosource_canada.png"
+                                alt="Ecosource Canada"
+                                className="img-fluid"
+                                width={300} // adjust as needed
+                                height={100} // adjust as needed
+                                priority
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+  <Footer></Footer>
+    
+    </>
   );
-}
+};
+
+export default Homemain;
